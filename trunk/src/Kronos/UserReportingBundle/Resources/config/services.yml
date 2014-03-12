@@ -1,0 +1,13 @@
+parameters:
+#    kronos_user_reporting.example.class: Kronos\UserReportingBundle\Example
+
+services:
+#    kronos_user_reporting.example:
+#        class: %kronos_user_reporting.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    kronos.dbal_tool:
+        class:        Kronos\UserReportingBundle\Services\DbalTool
+        arguments:   [@doctrine.dbal.default_connection]
+        
+    kronos.date_tool:
+        class:        Kronos\UserReportingBundle\Services\DateTool

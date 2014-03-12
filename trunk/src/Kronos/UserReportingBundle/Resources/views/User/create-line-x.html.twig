@@ -1,0 +1,49 @@
+{# empty Twig template #}
+{% extends 'KronosUserReportingBundle::ajax_layout.html.twig' %}
+
+{% block content %}
+
+        {% include 'KronosUserReportingBundle::flash.html.twig' %}
+
+        <h2 style="text-align:left">Add New</h2>
+
+        <form name="kronos_form_line" id="kronos_form_line" method="post" action="{{ info.action }}">
+
+        <!-- Tables ֠Classing data -->
+        <table cellspacing="0" cellpadding="0" class="table table-empty-data" summary="Titre du tableau">
+            <thead>
+                <tr>
+                    <th scope="col">Activity</th>
+                    <th scope="col">Project</th>
+                    <th scope="col">Task</th>
+                    <th scope="col">Monday</th>
+                    <th scope="col">Tuesday</th>
+                    <th scope="col">Wednesday</th>
+                    <th scope="col">Thursday</th>
+                    <th scope="col">Friday</th>
+                    <th scope="col">Saturday</th>
+                    <th scope="col">Sunday</th>
+                    <th scope="col">Action</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            {% form_theme form 'KronosUserReportingBundle:Form:form_div_layout.html.twig' %}
+
+            <tr>
+
+                {{ form_widget(form) }}
+                
+                <td>
+                    <button type="submit" id="kronos_form_line_x_save" name="kronos_form_line_x_save" class="button-classic">Add new</button>
+                </td>
+
+            </tr>
+
+                </tbody>
+            </table>
+            <!-- /Tables ֠Classing data -->	
+
+        </form>
+
+{% endblock %}

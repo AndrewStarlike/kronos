@@ -1,0 +1,67 @@
+{% extends 'KronosUserReportingBundle::layout.html.twig' %}
+
+{% block title %}Create New Line{% endblock %}
+
+
+{% block body %}
+
+
+    {% include 'KronosUserReportingBundle::flash.html.twig' %}
+
+        <h1 style="text-align:left">Create New Line</h1>
+
+        <form name="kronos_form_line_save" method="post" action="{{ info.action }}">
+
+        <!-- Tables ֠Classing data -->
+        <table cellspacing="0" cellpadding="0" class="table table-empty-data" summary="Titre du tableau">
+            <thead>
+                <tr>
+                    <th scope="col">Activity</th>
+                    <th scope="col">Project</th>
+                    <th scope="col">Task</th>
+                    <th scope="col">Monday</th>
+                    <th scope="col">Tuesday</th>
+                    <th scope="col">Wednesday</th>
+                    <th scope="col">Thursday</th>
+                    <th scope="col">Friday</th>
+                    <th scope="col">Saturday</th>
+                    <th scope="col">Sunday</th>
+                </tr>
+            </thead>
+            <tbody>
+
+            {% form_theme form 'KronosUserReportingBundle:Form:form_div_layout.html.twig' %}
+
+            <tr>
+
+                {{ form_widget(form) }}	
+
+            </tr>
+
+                </tbody>
+            </table>
+            <!-- /Tables ֠Classing data -->	
+                
+    <p>
+            <button type="submit" id="kronos_form_line_save" name="kronos_form_line_save" class="button-classic">Submit</button>
+    </p>
+
+    </form>
+        
+{% endblock %}
+
+
+
+{#
+{% extends 'KronosUserReportingBundle::bootstrap_layout.html.twig' %}
+
+{% block title %}User Time Report Index{% endblock %}
+
+{% block body %}
+
+    {% include 'BraincraftedBootstrapBundle::flash.html.twig' %}
+
+    {{ form(form, { 'style': 'inline' }) }}
+
+{% endblock %}
+#}

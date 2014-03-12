@@ -1,0 +1,12 @@
+parameters:
+#    kronos_user.example.class: Kronos\UserBundle\Example
+
+services:
+#    kronos_user.example:
+#        class: %kronos_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    kronos_user.admin.user:
+        class: Kronos\UserBundle\Admin\UserAdmin
+        arguments: [~, Kronos\UserBundle\Entity\User, KronosUserBundle:UserAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: User}

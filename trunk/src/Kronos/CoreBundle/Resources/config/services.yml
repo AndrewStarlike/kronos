@@ -1,0 +1,36 @@
+parameters:
+#    kronos_core.example.class: Kronos\CoreBundle\Example
+
+services:
+#    kronos_core.example:
+#        class: %kronos_core.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    kronos_core.admin.activity:
+        class: Kronos\CoreBundle\Admin\ActivityAdmin
+        arguments: [~, Kronos\CoreBundle\Entity\Activity, KronosCoreBundle:ActivityAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Activity}
+
+    kronos_core.admin.line_type:
+        class: Kronos\CoreBundle\Admin\LineTypeAdmin
+        arguments: [~, Kronos\CoreBundle\Entity\LineType, KronosCoreBundle:LineTypeAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: LineType}
+
+    kronos_core.admin.project:
+        class: Kronos\CoreBundle\Admin\ProjectAdmin
+        arguments: [~, Kronos\CoreBundle\Entity\Project, KronosCoreBundle:ProjectAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Project}
+
+    kronos_core.admin.task_type:
+        class: Kronos\CoreBundle\Admin\TaskTypeAdmin
+        arguments: [~, Kronos\CoreBundle\Entity\TaskType, KronosCoreBundle:TaskTypeAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: TaskType}
+
+    kronos_core.admin.team:
+        class: Kronos\CoreBundle\Admin\TeamAdmin
+        arguments: [~, Kronos\CoreBundle\Entity\Team, KronosCoreBundle:TeamAdmin]
+        tags:
+            - {name: sonata.admin, manager_type: orm, group: admin, label: Team}

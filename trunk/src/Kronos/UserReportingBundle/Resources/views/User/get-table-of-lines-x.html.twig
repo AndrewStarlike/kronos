@@ -1,0 +1,59 @@
+{% extends 'KronosUserReportingBundle::ajax_layout.html.twig' %}
+
+{% block content %}
+
+        <!-- Tables ֠Classing data -->
+        <table cellspacing="0" cellpadding="0" class="table table-empty-data" id="{{ info.lineTypeId }}" summary="Titre du tableau">
+            <thead>
+                <tr>
+                    <th scope="col">Activity</th>
+                    <th scope="col">Project</th>
+                    <th scope="col">Task</th>
+                    <th scope="col">Monday</th>
+                    <th scope="col">Tuesday</th>
+                    <th scope="col">Wednesday</th>
+                    <th scope="col">Thursday</th>
+                    <th scope="col">Friday</th>
+                    <th scope="col">Saturday</th>
+                    <th scope="col">Sunday</th>
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for formArray in forms %}
+
+                    {% set form = formArray['form'].createView() %}
+
+                    {% form_theme form 'KronosUserReportingBundle:Form:form_div_layout.html.twig' %}
+
+                    <tr{{ cycle(['', " class=even"], loop.index0) }}>
+                        <td>
+                            <a href="{{ path('kronos_delete_line_datas', {'lineId': form.vars.value.getId(), 'inWeek': info.inWeek, 'inYear': info.inYear}) }}">Remove</a>
+                        </td>
+
+                        {{ form_widget(form) }}
+
+                        <td class="numerical-positive">
+                            {{ formArray['lineTotal'] }}
+                        </td>
+
+                    </tr>
+
+                {% endfor %}
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3"><strong>Total&nbsp;:</strong></td>
+                        <td class="numerical-positive left">{{ daysTotal['Mon'] }}</td>
+                        <td class="numerical-positive left">{{ daysTotal['Tue'] }}</td>
+                        <td class="numerical-positive left">{{ daysTotal['Wed'] }}</td>
+                        <td class="numerical-positive left">{{ daysTotal['Thu'] }}</td>
+                        <td class="numerical-positive left">{{ daysTotal['Fri'] }}</td>
+                        <td class="numerical-positive left">{{ daysTotal['Sat'] }}</td>
+                        <td class="numerical-positive left">{{ daysTotal['Sun'] }}</td>
+                        <td class="numerical-positive">{{ daysTotal['total'] }}</td>
+                    </tr>
+                </tfoot>
+            </table>
+        
+{% endblock %}

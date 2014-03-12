@@ -1,0 +1,24 @@
+kronos_index:
+    pattern:  /user/index/{inWeek}/{inYear}
+    defaults: { _controller: KronosUserReportingBundle:User:index, inWeek: null, inYear: null }
+    requirements: {inWeek:  \d+, inYear:  \d+}
+
+kronos_create_line:
+    pattern:  /user/create-line/{inWeek}/{inYear}/{type}
+    defaults: { _controller: KronosUserReportingBundle:User:createLine, inWeek: null, inYear: null, type: null }
+    requirements: {inWeek:  \d+, inYear:  \d+}
+    
+kronos_edit_line:
+    pattern:  /user/edit-line/{lineId}/{inWeek}/{inYear}
+    defaults: { _controller: KronosUserReportingBundle:User:editLine, inWeek: null, inYear: null }
+    requirements: {lineId:  \d+, inWeek:  \d+, inYear:  \d+}
+    
+kronos_delete_line_datas:
+    pattern:  /user/delete-line-datas/{lineId}/{inWeek}/{inYear}
+    defaults: { _controller: KronosUserReportingBundle:User:deleteLineDatas, inWeek: null, inYear: null }
+    requirements: {lineId:  \d+, inWeek:  \d+, inYear:  \d+}
+    
+kronos_get_table:
+    pattern:  /user/get-table/{lineTypeId}/{inWeek}/{inYear}
+    defaults: { _controller: KronosUserReportingBundle:User:getTable, inWeek: null, inYear: null }
+    requirements: {lineTypeId:  \d+, inWeek:  \d+, inYear:  \d+}

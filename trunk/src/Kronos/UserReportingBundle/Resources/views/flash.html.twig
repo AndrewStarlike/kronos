@@ -1,0 +1,15 @@
+{# empty Twig template #}
+<div id="errorsParent">
+    {% for flashMessage in app.session.flashbag.get('error') %}
+        <div class="infobox_error">
+            <p><strong>{{ flashMessage }}</strong></p>
+        </div>
+    {% endfor %}
+
+    {# empty Twig template #}
+    {% for flashMessage in app.session.flashbag.get('confirm') %}
+        <div class="infobox_confirm">
+            <p><strong>{{ flashMessage }}</strong></p>
+        </div>
+    {% endfor %}
+</div>

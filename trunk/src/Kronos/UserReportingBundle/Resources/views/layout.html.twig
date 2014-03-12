@@ -1,0 +1,84 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+    <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/kronosuserreporting/css/general.css') }}" />
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/kronosuserreporting/css/gabarits.css') }}" />
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/kronosuserreporting/css/tableaux.css') }}" />
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/kronosuserreporting/css/formulaires.css') }}" />
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/kronosuserreporting/css/boutons.css') }}" />
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/kronosuserreporting/css/liens-internes-externes.css') }}" />
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/kronosuserreporting/css/messages-erreur-info.css') }}" />
+        <link rel="stylesheet" type="text/css" media="all" href="{{ asset('bundles/kronosuserreporting/css/custom.css') }}" />
+        <script src="{{ asset('bundles/kronosuserreporting/js/jquery-1.11.0.min.js') }}"></script>
+        <script src="{{ asset('bundles/kronosuserreporting/js/custom.js') }}"></script>
+        <link rel="shortcut icon" href="../../favicon.ico">
+            <link rel="icon" type="image/png" href="{{ asset('bundles/kronosuserreporting/images/favicon.png') }}">
+                <title>{% block title %}{% endblock %}</title>
+                </head>
+                <body>
+
+                    <!-- Top links -->
+                    <div id="toplinks" style="background-color:#808080;">
+                        <div id="toplinks-inner">
+                            Links
+                        </div>
+                    </div>
+
+                    <!-- Wrapper -->
+                    <div id="wrapper">
+
+                        <!-- Container -->
+                        <div id="container">
+
+                            <!-- Header -->
+                            <div id="header" class="clear compact">
+
+
+                                <!-- Logo -->
+                                <div id="logo">
+                                    <div style="background-color:#808080; padding:3px; height:34px;">Logo</div>
+                                </div>
+
+                                <!-- Navigation -->
+                                <div id="navigation">
+                                    <div style="background-color:#808080; padding:3px;">Navigation</div>
+                                </div>
+                                <!-- /Navigation -->
+
+                            </div>
+                            <!-- /Header -->
+
+                            <!-- Content -->
+                            <div id="content">
+
+                                <div>
+                                    {% block body %}{% endblock %}
+                                </div>
+
+                            </div>
+                            <!-- /Content -->	
+
+                        </div>
+                        <!-- /Container -->
+
+                    </div>
+                    <!-- /Wrapper -->
+
+                    <!-- Footer -->
+                    <div id="footer" style="background-color:#808080;">
+                        <div id="footer-inner">
+                            Footer
+                        </div>
+                    </div>
+                    <!-- /Footer -->
+
+
+
+
+                    <!-- Javascript -->
+                    <!-- /Javascript -->
+
+                </body>
+                </html>
