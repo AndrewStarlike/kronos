@@ -946,12 +946,12 @@
         "source": {
             "type": "git",
             "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-            "reference": "300bab3141fdaaa878dec6f1035480197bfc6584"
+            "reference": "2910fe70f22981a14af7239f268058f51218df80"
         },
         "dist": {
             "type": "zip",
-            "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/300bab3141fdaaa878dec6f1035480197bfc6584",
-            "reference": "300bab3141fdaaa878dec6f1035480197bfc6584",
+            "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/2910fe70f22981a14af7239f268058f51218df80",
+            "reference": "2910fe70f22981a14af7239f268058f51218df80",
             "shasum": ""
         },
         "require": {
@@ -984,7 +984,7 @@
             "jms/translation-bundle": "Extract message keys from Admins",
             "sonata-project/intl-bundle": "Add localized date and number into the list"
         },
-        "time": "2014-03-09 20:04:02",
+        "time": "2014-03-12 19:28:28",
         "type": "symfony-bundle",
         "extra": {
             "branch-alias": {

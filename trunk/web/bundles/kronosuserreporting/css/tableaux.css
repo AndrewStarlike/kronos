@@ -1,0 +1,155 @@
+.table {
+	width:100%;
+	margin-bottom:1em;
+	text-align:left;
+	border-spacing:0;
+	border-collapse:collapse;
+	border-bottom:3px solid #AFAFAF;
+}
+.table caption {
+	padding:0 0 .2em;
+	color:#444;
+	font-weight:bold;
+	font-size:1.4em;
+}
+.table th a,
+.table th span,
+.table td {
+	padding:.25em 1.25em .25em .5em;
+}
+.table th {
+	vertical-align:middle;
+	font-weight:bold;
+	background-color:#EEE;
+	border-top:1px solid #E1E1E1;
+	border-right:1px solid #AFAFAF;
+	border-bottom:1px solid #AFAFAF;
+	border-left:1px solid #E1E1E1;
+}
+.table td {
+	vertical-align:top;
+	border-bottom:1px solid #E1E1E1;
+}
+
+.table th a {
+	display:block;
+	margin:0;
+	height:100%;
+	padding-right:1em;
+	color:#444;
+	font-weight:bold;
+	text-decoration:none;
+	border:0;
+	background:#EEE url("../_images/triangle-m-lightgray-s.png") 95% center no-repeat;
+}
+.table th span {
+	display:block;
+}
+.table th.on {
+	background:#000;
+}
+
+.table th a:hover,
+.table th a:focus {
+	color:#F50;
+	text-decoration:underline;
+	background:transparent url("../_images/triangle-m-gray-s.png") 95% center no-repeat;
+}
+.table th.on a {
+	background:#CCC url("../_images/triangle-m-white-s.png") 95% center no-repeat;
+}
+.table th.on.desc a {
+	background:#CCC url("../_images/triangle-m-white-n.png") 95% center no-repeat;
+}
+
+.table th.headerSortUp, .table th.headerSortDown {
+	background:#CCC;
+}
+
+.table th.headerSortUp a {
+	color:#333;
+	background:#CCC url("../_images/triangle-m-gray-s.png") 95% center no-repeat;
+}
+
+.table th.headerSortDown a {
+	color:#333;
+	background:#CCC url("../_images/triangle-m-gray-n.png") 95% center no-repeat;
+}
+
+.table tr:hover td, .table tr td.over {
+	background:#FEC;
+}
+.table .even {
+	background-color:#FAFAFA;
+}
+.table .numerical-positive {
+	text-align:right;
+	color:#093;
+}
+.table .numerical-negative {
+	text-align:right;
+	color:#D60000;
+}
+
+
+/* Collapsable table */
+.table-collapsable tr.collapsable th {
+	border:0;
+	border-bottom:2px solid #E1E1E1;
+}
+.table-collapsable tr.collapsable th a {
+	font-size:1.15em;
+	padding-left:1.7em;
+	background:#FFF url("../_images/icon-s-plus.link.png") 7px center no-repeat;
+}
+.table-collapsable tr.collapsable th.open a {
+	background-image:url("../_images/icon-s-min.link.png");
+}
+.table-collapsable tr.collapsable th a:hover,
+.table-collapsable tr.collapsable th a:focus {
+	color:#444;
+	background-color:#FEC;
+}
+.table tr.collapsable-line.open td {
+	border-bottom:0;
+}
+.table tr.collapsable-line button {
+	padding:0;
+	margin:0 0 0 .25em;
+	width:7px;
+	height:7px;
+	vertical-align:middle;
+	border:0;
+	background:transparent url(../_images/triangle-m-gray-e.png) center center no-repeat;
+}
+.table tr.collapsable-line.open button {
+	background-image:url(../_images/triangle-m-gray-s.png);
+}
+.table tr.collapsable-content td {
+	padding:.25em 1em;
+	font-size:.9em;
+	background-image:url(../_images/triangle-m-gray-e.png);
+	background-position:center center;
+	background-repeat:no-repeat;
+}
+
+/* Double entry table */
+.table-doubleentry td {
+	border:1px solid #E1E1E1;
+}
+
+/* Quadril table */
+.table-quadril td {
+	border:1px solid #E1E1E1;
+}
+
+/* Total table */
+.table-total tfoot td {
+	text-align:right;
+	background:#f8ecdf;
+	border-top:3px solid #AFAFAF;
+}
+.table-total tfoot td.numerical-positive strong,
+.table-total tfoot td.numerical-negative strong {
+	color:#444;
+}

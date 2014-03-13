@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "bdaa13d1a7f7f8a0b156192506c87590",
+    "hash": "616dbe8d0b0ebc599732e495f13abf75",
     "packages": [
         {
             "name": "doctrine/annotations",
@@ -1532,12 +1532,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sonata-project/SonataAdminBundle.git",
-                "reference": "300bab3141fdaaa878dec6f1035480197bfc6584"
+                "reference": "2910fe70f22981a14af7239f268058f51218df80"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/300bab3141fdaaa878dec6f1035480197bfc6584",
-                "reference": "300bab3141fdaaa878dec6f1035480197bfc6584",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/2910fe70f22981a14af7239f268058f51218df80",
+                "reference": "2910fe70f22981a14af7239f268058f51218df80",
                 "shasum": ""
             },
             "require": {
@@ -1604,7 +1604,7 @@
                 "bootstrap",
                 "sonata"
             ],
-            "time": "2014-03-09 20:04:02"
+            "time": "2014-03-12 19:28:28"
         },
         {
             "name": "sonata-project/block-bundle",

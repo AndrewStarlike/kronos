@@ -7,12 +7,14 @@
 namespace Kronos\CoreBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Data
  *
  * @ORM\Table()
  * @ORM\Entity(repositoryClass="Kronos\CoreBundle\Entity\DataRepository")
+ * @ORM\HasLifecycleCallbacks()
  */
 class Data {
 
@@ -32,6 +34,12 @@ class Data {
 
     /**
      * @ORM\Column(type="integer", nullable=true)
+     * @Assert\Range(
+     *      min = 0,
+     *      max = 9,
+     *      minMessage = "Minimum value for this field is 0",
+     *      maxMessage = "Maximum value for this field is 9"
+     * )
      */
     private $hours;
 
