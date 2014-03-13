@@ -1,0 +1,38 @@
+Kronos is a basic Open Source PHP Time Tracker based on Symfony2 and Sonata Project relesead under MIT license. 
+It is user friendly and follows web content accessibility guidelines.
+
+
+Installation instructions:
+
+1. Get the code from the trunk (/trunk) on your machine.
+
+2. Create a vhost for it. An example on XAMPP Windows 7 would look like:
+<VirtualHost *>
+	DocumentRoot "C:/apps/kronosGit/trunk/web"
+	ServerName kronosgit.dev
+	<Directory "C:/apps/kronosGit/trunk/web">
+		Require all granted
+		Order allow,deny
+		AllowOverride All
+		Allow from All
+	</Directory>
+</VirtualHost>
+
+3. Create a parameters.yml file in /app/config/parameters.yml. An example:
+parameters:
+    database_driver: pdo_mysql
+    database_host: 127.0.0.1
+    database_port: null
+    database_name: kronos
+    database_user: root
+    database_password: null
+    mailer_transport: smtp
+    mailer_host: 127.0.0.1
+    mailer_user: null
+    mailer_password: null
+    locale: en
+    secret: 'someSecretToken'
+
+4. Install database, run migrations, run fixtures and create a FOS User.
+
+5. Browse to http://kronosgit.dev/app_dev.php/user/index and start using the app :)
