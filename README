@@ -6,7 +6,9 @@ Installation instructions:
 
 1. Get the code from the trunk (/trunk) on your machine.
 
-2. Create a vhost for it. An example on XAMPP Windows 7 would look like:
+2. Change directory to /trunk and run composer update.
+
+3. Create a vhost for it. An example on XAMPP Windows 7 would look like:
 <VirtualHost *>
 	DocumentRoot "C:/apps/kronosGit/trunk/web"
 	ServerName kronosgit.dev
@@ -18,7 +20,7 @@ Installation instructions:
 	</Directory>
 </VirtualHost>
 
-3. Create a parameters.yml file in /app/config/parameters.yml. An example:
+4. Create a parameters.yml file in /app/config/parameters.yml. An example:
 parameters:
     database_driver: pdo_mysql
     database_host: 127.0.0.1
@@ -33,6 +35,6 @@ parameters:
     locale: en
     secret: 'someSecretToken'
 
-4. Install database, run migrations, run fixtures and create a FOS User.
+5. Install database, run migrations, run fixtures and create a FOS User.
 
-5. Browse to http://kronosgit.dev/app_dev.php/user/index and start using the app :)
+6. Browse to http://kronosgit.dev/app_dev.php/admin/dashboard and insert data and to http://kronosgit.dev/app_dev.php/user/index and start using the app :)
